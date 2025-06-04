@@ -1,0 +1,98 @@
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-panel {
+  flex: 1;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+}
+
+.left-panel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/logo.svg') center 60% no-repeat;
+  background-size: 70%;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.slogan {
+  z-index: 1;
+  text-align: center;
+}
+
+.slogan h1 {
+  font-size: 2.5rem;
+  color: #35495e;
+  margin-bottom: 10px;
+}
+
+.slogan h2 {
+  font-size: 1.5rem;
+  color: #41b883;
+  font-weight: normal;
+}
+
+.right-panel {
+  flex: 1;
+  background: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  width: 350px;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #35495e;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 42px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    height: 200px;
+  }
+
+  .right-panel {
+    flex: 2;
+  }
+}
